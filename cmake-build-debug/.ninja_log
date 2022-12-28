@@ -1,7 +1,0 @@
-# ninja log v5
-345	393	1672251432961586355	Project	54a65af86ff48870
-2	320	1672251432886994638	CMakeFiles/Project.dir/src/func.cpp.o	1e8c3379f82f804b
-5	276	1672252397117426499	build.ninja	526dbf311448a65d
-2	326	1672251432892782313	CMakeFiles/Project.dir/src/Blocks.cpp.o	43e31dfb57d3fa3d
-2	345	1672251432912661541	CMakeFiles/Project.dir/main.cpp.o	dd437a3ff94c9265
-3	428	1672237739013065729	CMakeFiles/Project.dir/src/Platforma.cpp.o	5770fe9e23427b91

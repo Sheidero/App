@@ -4,11 +4,12 @@
 #include "../inc/Blocks.hpp"
 #include <SFML/Graphics.hpp>
 
-Blocks::Blocks(int x, int y, float delta) {
+Blocks::Blocks(int x, int y, float delta, short int t) {
     m_x = x;
     m_y = y;
-    block.setSize(sf::Vector2f(delta, 50.f));
-    block.setFillColor(sf::Color::White);
+    m_delta = delta;
+    block.setSize(sf::Vector2f(m_delta, 50.f));
+    block.setFillColor(sf::Color(6*t,3*t,2*t));
 
 }
 sf::RectangleShape Blocks::GetBlock() {
@@ -24,7 +25,7 @@ int Blocks::Gety() {
 void Blocks::Low() {
     m_y += 50;
 }
-void Blocks::Change(int y, float delta, float wide, short int i) {
-    block.setSize(sf::Vector2f(delta, wide));
-    m_y = wide * i;
+void Blocks::Change(float wide, short int i) {
+    block.setSize(sf::Vector2f(m_delta, wide));
+    m_y = 1500 - (i+1) * wide;
 }

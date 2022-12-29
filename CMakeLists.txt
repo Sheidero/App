@@ -3,8 +3,8 @@ project(Project)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES main.cpp src/Platforma.cpp inc/Platforma.hpp src/Blocks.cpp inc/Blocks.hpp src/func.cpp inc/func.hpp Textbox.cpp Textbox.hpp)
-add_executable(Project ${SOURCE_FILES} src/Platforma.cpp inc/Platforma.hpp src/Blocks.cpp inc/Blocks.hpp src/func.cpp inc/func.hpp Textbox.cpp Textbox.hpp)
+set(SOURCE_FILES main.cpp src/Platforma.cpp inc/Platforma.hpp src/Blocks.cpp inc/Blocks.hpp src/func.cpp inc/func.hpp src/Textbox.cpp inc/Textbox.hpp)
+add_executable(Project ${SOURCE_FILES} src/Platforma.cpp inc/Platforma.hpp src/Blocks.cpp inc/Blocks.hpp src/func.cpp inc/func.hpp src/Textbox.cpp inc/Textbox.hpp)
 include_directories(/usr/local/include)
 
 find_package(SFML 2.5 COMPONENTS system window graphics network audio REQUIRED)

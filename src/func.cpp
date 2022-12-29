@@ -6,7 +6,7 @@
 #include "../inc/func.hpp"
 
 void Lowit(std::vector<Blocks>* blocks, Platforma* plat){
-    if (plat ->Getstack() == 15){
+    if (plat ->Getstack() == 21){
         plat->Low();
         for( int i = 0; i < blocks->size();i++) {
             blocks->at(i).Low();

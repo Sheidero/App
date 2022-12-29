@@ -13,7 +13,7 @@ Platforma::Platforma() {
     flag = true;
     delta = 400.f;
     platform.setSize(sf::Vector2f(delta, 50.f));
-    platform.setFillColor(sf::Color::Cyan);
+    platform.setFillColor(sf::Color(6*5,3*5,2*5));
     platform.setPosition(m_x,m_y);
 }
 Platforma::Platforma(int x, int y) {
@@ -54,7 +54,7 @@ bool Platforma::MoveUp() {
         level += 1;
         stack += 1;
         m_leftx = m_x;
-        delta = m_rightx - m_leftx;
+        delta = m_rightx - m_leftx + 1;
         m_y -= 50;
         flag = not(flag);
         return true;
@@ -63,21 +63,12 @@ bool Platforma::MoveUp() {
         level += 1;
         stack += 1;
         m_rightx = m_x + delta;
-        delta = m_rightx - m_leftx;
+        delta = m_rightx - m_leftx + 1;
         flag = not(flag);
         m_y -= 50;
         return true;
     }
     else {
-        m_x = 800;
-        m_y = 1400;
-        m_leftx = 800;
-        m_rightx = 1200;
-        level = 1;
-        stack = 1;
-        flag = true;
-        delta = 400.f;
-        std::cout<< "cool" << std::endl;
         return false;
     }
 }
@@ -96,4 +87,21 @@ short int Platforma::Getstack() {
 void Platforma::Low(){
     m_y += 50;
     stack -= 1;
+}
+short int Platforma::Getlevel(){
+    return level;
+}
+void Platforma::Setbase() {
+    m_x = 400;
+    m_y = 1400;
+    m_leftx = 800;
+    m_rightx = 1200;
+    level = 1;
+    stack = 1;
+    flag = true;
+    delta = 400.f;
+    platform.setSize(sf::Vector2f(delta, 50.f));
+}
+void Platforma::Color(short int t) {
+    platform.setFillColor(sf::Color(6*(t+5),3*(t+5),2*(t+5)));
 }

@@ -11,14 +11,15 @@ private:
     int m_x;
     int m_y;
     sf::RectangleShape block;
-
+    float m_delta;
+    sf::Texture kirpich;
 public:
-    Blocks(int x, int y, float delta);
+    Blocks(int x, int y, float delta,short int t);
     sf::RectangleShape GetBlock();
     int Getx();
     int Gety();
     void Low();
-    void Change(int y, float delta, float wide, short int i);
+    void Change(float wide, short int i);
 };
 
 #endif //PROJECT_BLOCKS_HPP

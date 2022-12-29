@@ -31,6 +31,9 @@ public:
     float Getdelta();
     short int Getstack();
     void Low();
+    short int Getlevel();
+    void Setbase();
+    void Color(short int t);
 };
 
 #endif //PROJECT_PLATFORMA_HPP

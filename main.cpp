@@ -9,6 +9,7 @@
 int main()
 {
     sf::RenderWindow window(sf::VideoMode(2000, 1500), "Stack");
+
     sf::Texture background;
     background.loadFromFile("../res/background.png");
     sf::Sprite backgrounds(background);

@@ -12,7 +12,6 @@ private:
     int m_y;
     int m_leftx;
     int m_rightx;
-    int curlen;
     bool flag;
     float delta;
     sf::RectangleShape platform;
